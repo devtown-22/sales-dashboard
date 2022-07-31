@@ -1,4 +1,4 @@
-const descriptionMd = `Nuxt Typescript Template`
+const descriptionMd = `Sales Portal`
 
 const description = descriptionMd
   .replace(/\[([^\]]+)\](\([^)]+\)|\[[^\]]+\])/g, '$1')
@@ -7,15 +7,15 @@ const description = descriptionMd
   .trim()
 
 module.exports = {
-  title: 'Seongland',
+  title: 'Devtown Sales Portal',
   descriptionMd,
   description,
   url: 'https://www.seongland.com',
-  twitterUsername: '@SeonglaeC',
-  email: 'seongle3737@gmail.com',
+  twitterUsername: '@shapeai',
+  email: 'shape',
   socials: {
-    GitHub: 'https://github.com/seongland/seongland-ing',
-    Twitter: 'https://twitter.com/SeonglaeC',
+    GitHub: '',
+    Twitter: '',
   },
   bgColor: '#1A202C',
   themeColor: '#46c0aE',

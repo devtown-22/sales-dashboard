@@ -5,24 +5,23 @@ import { Box, ChakraProvider, Stack } from '@chakra-ui/react'
 import { DefaultSeo, SocialProfileJsonLd } from 'next-seo'
 import Head from 'next/head'
 import NProgress from 'nprogress'
-import Router from 'next/router'
 import dynamic from 'next/dynamic'
 
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { theme } from '@/theme'
 import siteConfig from '~/site-config'
-
+import '../lib/firebase'
 import type { AppProps } from '@/types/next'
+import Sidebar from "@/components/Sidebar";
+import 'react-block-ui/style.css';
 
 const MobileDrawer = dynamic(() => import('@/components/mobile-drawer').then(C => C.MobileDrawer))
 
-Router.events.on('routeChangeStart', () => NProgress.start())
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.done())
 
 function App(props: AppProps) {
   const { Component, pageProps, router } = props
+const { pathname, asPath  } = router
 
   return (
     <>
@@ -68,15 +67,13 @@ function App(props: AppProps) {
           <Component {...pageProps} />
         ) : (
           <>
-            <Stack justify="space-between" minH="100vh" spacing={0}>
               <Navbar />
+              <Sidebar activeItemName={pathname}>
               <Box as="main">
                 <Component {...pageProps} />
               </Box>
-              <Footer />
-            </Stack>
-
             <MobileDrawer />
+              </Sidebar>
           </>
         )}
       </ChakraProvider>
