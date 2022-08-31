@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import {HStack, Icon, IconButton, Link, useColorMode, useColorModeValue} from '@chakra-ui/react'
+import { HStack, Icon, IconButton, Link, useColorMode, useColorModeValue } from '@chakra-ui/react'
 
 import { FaMoon } from 'react-icons/fa'
 import NextLink from 'next/link'
@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
   const { toggleColorMode } = useColorMode()
 
   return (
-    <HStack as="nav" fontSize="md" p={4} spacing={0} >
+    <HStack as="nav" fontSize="md" p={4} spacing={0}>
       <NextLink href="/">
         <Link fontWeight="bold" href="/" p={4} variant="link">
           {siteConfig.title}

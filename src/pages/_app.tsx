@@ -13,15 +13,14 @@ import { theme } from '@/theme'
 import siteConfig from '~/site-config'
 import '../lib/firebase'
 import type { AppProps } from '@/types/next'
-import Sidebar from "@/components/Sidebar";
-import 'react-block-ui/style.css';
+import Sidebar from '@/components/Sidebar'
+import 'react-block-ui/style.css'
 
 const MobileDrawer = dynamic(() => import('@/components/mobile-drawer').then(C => C.MobileDrawer))
 
-
 function App(props: AppProps) {
   const { Component, pageProps, router } = props
-const { pathname, asPath  } = router
+  const { pathname, asPath } = router
 
   return (
     <>
@@ -67,13 +66,19 @@ const { pathname, asPath  } = router
           <Component {...pageProps} />
         ) : (
           <>
-              <Navbar />
-              <Sidebar activeItemName={pathname}>
+            {pathname === '/' || pathname === '/login' || pathname === '/pay/[id]' || pathname === '/create-pay/[id]' ? (
               <Box as="main">
                 <Component {...pageProps} />
               </Box>
-            <MobileDrawer />
-              </Sidebar>
+            ) : (
+              <>
+                <Navbar />
+                <Sidebar activeItemName={pathname}>
+                  <Component {...pageProps} />
+                  <MobileDrawer />
+                </Sidebar>
+              </>
+            )}
           </>
         )}
       </ChakraProvider>

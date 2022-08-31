@@ -21,3 +21,7 @@ export function absoluteUrl(req?: NextApiRequest, localhostAddress = 'localhost:
     origin: `${protocol}//${host}`,
   }
 }
+
+export const formatRawPriceToInr = (price: number) => {
+  return `₹ ${(price / 100).toFixed(2)}`
+}
