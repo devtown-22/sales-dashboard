@@ -15,3 +15,12 @@ export default async () => {
     },
   })
 }
+
+export const adminApi =  () => {
+  return axios.create({
+    baseURL: process.env.NEXT_PUBLIC_API_URL,
+    headers: {
+      Authorization: `Bearer ${sessionStorage.adminToken}`,
+    },
+  })
+}

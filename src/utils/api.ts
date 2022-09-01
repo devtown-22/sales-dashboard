@@ -1,4 +1,4 @@
-import api from '../lib/api'
+import api , {  adminApi } from '../lib/api'
 export const fetchCourses = async () => {
   const apiInst = await api()
   return apiInst.get('/courses')
@@ -58,6 +58,18 @@ export const getBulkPayments = async () => {
 }
 
 export const getPaymentsByBulkId = async (id: string) => {
-    const apiInst = await api()
-    return apiInst.get(`/payments/bulk/${id}/payments`)
+  const apiInst = await api()
+  return apiInst.get(`/payments/bulk/${id}/payments`)
+}
+
+export const loginAdmin = async (email: string, password: string) => {
+  const apiInst = await api()
+  return apiInst.post('/users/admin/login', {
+    email,
+    password,
+  })
+}
+
+export const createUsers = async (body: any) => {
+  return adminApi().post('/users/create-lot-of-users', body)
 }

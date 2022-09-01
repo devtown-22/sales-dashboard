@@ -8,6 +8,10 @@ const heading = `Jost,${defaultTheme.fonts.heading}`
 const mono = `Cousine,${defaultTheme.fonts.mono}`
 
 export const theme = extendTheme({
+  config: {
+    useSystemColorMode: false,
+    initialColorMode: 'light',
+  },
   components: {
     Link: {
       variants: {

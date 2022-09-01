@@ -1,4 +1,5 @@
 # Minimal Next JS Typescript Template
+
 Fork of [Nextplate](https://github.com/nextplate-dev/nextplate)
 
 - [Vercel Demo](https://nextra-ts.vercel.app)
@@ -9,6 +10,7 @@ Fork of [Nextplate](https://github.com/nextplate-dev/nextplate)
 
 - `Use this template` Button on Github
 - Or Clone this Project
+
 ```bash
 git clone https://github.com/seonglae/next-ts-template
 yarn
@@ -38,4 +40,3 @@ yarn dev
 
 - Atomic Design Pattern
 - Minimalism
-

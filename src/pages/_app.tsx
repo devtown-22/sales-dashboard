@@ -66,7 +66,12 @@ function App(props: AppProps) {
           <Component {...pageProps} />
         ) : (
           <>
-            {pathname === '/' || pathname === '/login' || pathname === '/pay/[id]' || pathname === '/create-pay/[id]' ? (
+            {pathname === '/' ||
+            pathname === '/login' ||
+            pathname === '/pay/[id]' ||
+            pathname === '/create-pay/[id]' ||
+            pathname === '/admin' ||
+            pathname === '/admin-login' ? (
               <Box as="main">
                 <Component {...pageProps} />
               </Box>
