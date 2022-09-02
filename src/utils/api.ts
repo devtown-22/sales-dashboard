@@ -73,3 +73,10 @@ export const loginAdmin = async (email: string, password: string) => {
 export const createUsers = async (body: any) => {
   return adminApi().post('/users/create-lot-of-users', body)
 }
+
+export const sendResetPasswordEmail = async (email: string) => {
+    const apiInst = await api()
+    return apiInst.post('/users/send-reset-password-email', {
+        email,
+    })
+}

@@ -84,7 +84,6 @@ const Admin = () => {
         reader.readAsText(file);
         // when the file is loaded, prase the text to csv
         reader.onload = (event) => {
-            // check the header of the csv file to make sure it is the right format (format: email,name,password)
             const csv = event.target.result;
             try {
                 const parsedCSV = parseCSV(csv);

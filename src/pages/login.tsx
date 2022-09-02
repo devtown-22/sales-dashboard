@@ -16,8 +16,9 @@ import {
   InputRightElement,
 } from '@chakra-ui/react'
 import { FaUserAlt, FaLock } from 'react-icons/fa'
-import { signInUserWithCredential, onAuthStateChanged } from '../utils/firebase'
+import { signInUserWithCredential, onAuthStateChanged, } from '../utils/firebase'
 import { useRouter } from 'next/router'
+import {sendResetPasswordEmail} from "@/utils/api";
 const CFaUserAlt = chakra(FaUserAlt)
 const CFaLock = chakra(FaLock)
 
@@ -35,6 +36,19 @@ const App = () => {
     } catch (e) {
       console.log(e)
     }
+  }
+
+  const handleForgotPassword = async () => {
+    // Prompt the user with prompt to get the email and store it in a variable
+    const email = prompt('Enter your email')
+    // Send the email to the backend and get the reset link
+     sendResetPasswordEmail(email)
+    // Show the user a message saying that the email has been sent
+    alert('Email has been sent')
+    // Redirect the user to the reset link
+
+
+
   }
 
   const handleShowClick = () => setShowPassword(!showPassword)
@@ -91,9 +105,13 @@ const App = () => {
                     </Button>
                   </InputRightElement>
                 </InputGroup>
-                {/*<FormHelperText textAlign="right">*/}
-                {/*    <Link>forgot password?</Link>*/}
-                {/*</FormHelperText>*/}
+                <FormHelperText textAlign="right">
+                    <Button onClick={
+                        handleForgotPassword
+                    }
+
+                        backgroundColor={'transparent'}>forgot password?</Button>
+                </FormHelperText>
               </FormControl>
               <Button onClick={handleSubmit} borderRadius={0} variant="solid" colorScheme="teal" width="full">
                 Login
