@@ -27,6 +27,7 @@ const CreateLinkForm = props => {
     minAmount: 0,
     preRegistrationAmount: 0,
     campaignName: '',
+    note: '',
   })
   const [courseId, setCourseId] = useState('')
   const [batchId, setBatchId] = useState('')
@@ -131,7 +132,16 @@ const CreateLinkForm = props => {
         Create {isBulk && 'Bulk Payment'} Link{' '}
       </Heading>
       <form onSubmit={onSubmitHandler}>
-        <Grid mx={50} templateColumns="repeat(2, 1fr)" gap={6}>
+        <Grid mx={{
+            base: '0',
+            md: '50',
+        }} templateColumns={
+          {
+            md: 'repeat(2, 1fr)',
+            lg: 'repeat(3, 1fr)',
+            sm: 'repeat(1, 1fr)',
+          }
+        } gap={6}>
           {isBulk && (
             <Box>
               <FormLabel>Campaign Name</FormLabel>
@@ -188,7 +198,16 @@ const CreateLinkForm = props => {
           blocking={isBlocking}
           tag={'div'}
         >
-          <Grid my={6} mx={50} templateColumns="repeat(2, 1fr)" gap={6}>
+          <Grid my={6} mx={{
+            base: '0',
+            md: '50',
+          }} templateColumns={
+            {
+              md: 'repeat(2, 1fr)',
+              lg: 'repeat(3, 1fr)',
+              sm: 'repeat(1, 1fr)',
+            }
+          } gap={6}>
             {!isBulk && (
               <>
                 <Box>
@@ -221,6 +240,10 @@ const CreateLinkForm = props => {
             <Box>
               <FormLabel>Pitched Final Amount (Minimum {product.minimumSellingAmountInRupees})</FormLabel>
               <Input name={'sellingAmount'} value={formValues.sellingAmount} onChange={updateFormValue} required />
+            </Box>
+            <Box>
+              <FormLabel>Note *</FormLabel>
+              <Input name={'note'} value={formValues.note} onChange={updateFormValue} required placeholder={"Eg: June '22 Batch"} />
             </Box>
           </Grid>
         </BlockUi>

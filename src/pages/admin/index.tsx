@@ -9,7 +9,7 @@ const parseCSV = (csv) => {
     const requiredHeaders = ['email', 'name', 'password'];
     const lines = csv.split('\n');
     const result = [];
-    const headers = lines[0].split(',');
+    const headers = lines[0].split(',').map(h => h.trim());
 
     // check if the headers are correct
     if (headers.length !== requiredHeaders.length) {
@@ -107,7 +107,7 @@ const Admin = () => {
             <Label>
                 Select a CSV File
             </Label>
-                (The csv should have format => email, name, password)
+                (The csv should have format => email, password, name)
                 <input disabled={loading} type={'file'} onChange={onChangeHandler} />
                 {loading && <Spinner/>}
                 {users.length ?

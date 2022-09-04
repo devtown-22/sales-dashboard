@@ -9,7 +9,7 @@ const BulkPayments = () => {
     const data = await getBulkPayments()
     setBulkPayments(data.data.bulkPayments)
   }
-  const head = ['Campaign Name', 'Pre-Registration', 'Total Amount', 'Action']
+  const head = ['Campaign Name', 'Pre-Registration', 'Total Amount', 'Note', 'Action']
 
   useEffect(() => {
     loadPayments()

@@ -7,11 +7,12 @@ import { formatRawPriceToInr } from '@/utils'
 import Swal from 'sweetalert2'
 import CustomerDetailsSideModal from '@/features/CustomerDetailsSideModal'
 
-const BulkPay: FC<{ _id: string; campaignName: string; preRegistrationAmount: string; totalAmount: string }> = ({
+const BulkPay: FC<{ _id: string; campaignName: string; preRegistrationAmount: string; totalAmount: string; salesNote: string }> = ({
   _id,
   campaignName,
   preRegistrationAmount,
   totalAmount,
+                                                                                                                                     salesNote,
 }) => {
   const [payments, setPayments] = useState([])
   const head = ['Date', 'Customer Details', 'Pre-Registration', 'Pending Amount', 'Total Amount', 'Action']
@@ -93,6 +94,7 @@ const BulkPay: FC<{ _id: string; campaignName: string; preRegistrationAmount: st
           <>
             <Td>{preRegistrationAmount}</Td>
             <Td>{totalAmount}</Td>
+            <Td>{salesNote}</Td>
             <Td>
               <Button
                 onClick={() => {

@@ -29,15 +29,6 @@ export const MobileDrawer: React.FC = () => {
   return (
     <>
       <Box bottom={0} d={{ md: 'none' }} p={5} pos="fixed" right={0} zIndex={1}>
-        <IconButton
-          aria-label="Open menu"
-          bgColor={siteConfig.themeColor}
-          icon={<Icon as={isOpen ? FaTimes : FaBars} />}
-          isRound
-          onClick={onToggle}
-          ref={btnRef}
-          size="lg"
-        />
       </Box>
 
       <Drawer finalFocusRef={btnRef} isOpen={isOpen} onClose={onClose} placement="right">
@@ -51,20 +42,20 @@ export const MobileDrawer: React.FC = () => {
               </NextLink>
             </DrawerHeader>
 
-            <DrawerFooter justifyContent="flex-start" px={4} py={8}>
-              {socials.map(([href, SocialIcon]) => (
-                <IconButton
-                  as="a"
-                  aria-label={href}
-                  color="currentColor"
-                  href={href}
-                  icon={<Icon as={SocialIcon} boxSize={6} />}
-                  key={href}
-                  size="lg"
-                  variant="link"
-                />
-              ))}
-            </DrawerFooter>
+            {/*<DrawerFooter justifyContent="flex-start" px={4} py={8}>*/}
+            {/*  {socials.map(([href, SocialIcon]) => (*/}
+            {/*    <IconButton*/}
+            {/*      as="a"*/}
+            {/*      aria-label={href}*/}
+            {/*      color="currentColor"*/}
+            {/*      href={href}*/}
+            {/*      icon={<Icon as={SocialIcon} boxSize={6} />}*/}
+            {/*      key={href}*/}
+            {/*      size="lg"*/}
+            {/*      variant="link"*/}
+            {/*    />*/}
+            {/*  ))}*/}
+            {/*</DrawerFooter>*/}
           </DrawerContent>
         </DrawerOverlay>
       </Drawer>
