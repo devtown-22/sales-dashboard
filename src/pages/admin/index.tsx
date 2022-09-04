@@ -1,9 +1,9 @@
-import {Navbar} from "@/components/navbar";
-import {Label} from "@/components/LabelValue";
+import {Navbar} from "../../components/navbar";
+import {Label} from "../../components/LabelValue";
 import {Button, Container, Flex, Heading, Spinner, Alert} from "@chakra-ui/react";
 import {useRef, useState} from "react";
 import Swal from "sweetalert2";
-import {createUsers} from "@/utils/api";
+import {createUsers} from "../../utils/api";
 
 const parseCSV = (csv) => {
     const requiredHeaders = ['email', 'name', 'password'];

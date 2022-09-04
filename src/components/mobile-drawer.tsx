@@ -17,7 +17,7 @@ import {
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 import NextLink from 'next/link'
-import { useSocials } from '@/hooks/app'
+import { useSocials } from '../hooks/app'
 import siteConfig from '~/site-config'
 
 export const MobileDrawer: React.FC = () => {

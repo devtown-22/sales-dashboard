@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Box, Divider, Flex, HStack, Icon, Link, Stack } from '@chakra-ui/react'
-import { useSocials } from '@/hooks/app'
+import { useSocials } from '../hooks/app'
 
 export const Footer: React.FC = () => {
   const socials = useSocials()

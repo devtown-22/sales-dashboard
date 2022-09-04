@@ -4,7 +4,6 @@ import { HStack, Icon, IconButton, Link, useColorMode, useColorModeValue } from 
 
 import { FaMoon } from 'react-icons/fa'
 import NextLink from 'next/link'
-import { useSocials } from '@/hooks/app'
 import siteConfig from '~/site-config'
 
 export const Navbar: React.FC = () => {

@@ -1,9 +1,9 @@
 import { Box, Button, CloseButton, Divider, Flex, Heading, Spinner } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { getPayment } from '../utils/api'
-import LabelValue from '@/components/LabelValue'
+import LabelValue from '../components/LabelValue'
 import { format } from 'date-fns'
-import { formatRawPriceToInr } from '@/utils'
+import { formatRawPriceToInr } from '../utils'
 
 const CustomerDetailsSideModal = ({ paymentId, isOpen, onClose }) => {
   const [loading, setLoading] = useState(false)

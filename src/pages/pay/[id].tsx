@@ -1,13 +1,13 @@
 import { Heading, Grid, GridItem, Box, Flex, SimpleGrid, Text, Spinner, Button } from '@chakra-ui/react'
 import { Navbar } from '@/components/navbar'
-import { PayNavbar } from '@/components/pay-navbar'
+import { PayNavbar } from '../../components/pay-navbar'
 import NextScript from 'next/script'
 import { useEffect, useState } from 'react'
-import { getOrder, updateOrderStatus } from '@/utils/api'
+import { getOrder, updateOrderStatus } from '../../utils/api'
 import { useRouter } from 'next/router'
 import { format } from 'date-fns'
 import Swal from 'sweetalert2'
-import LabelValue, { Label, Value } from '@/components/LabelValue'
+import LabelValue, { Label, Value } from '../../components/LabelValue'
 import { AiFillCheckCircle } from 'react-icons/ai'
 
 const PaymentPage = () => {

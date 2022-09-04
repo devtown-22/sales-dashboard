@@ -1,15 +1,8 @@
 import * as React from 'react'
 
-import { HStack, Icon, IconButton, Link, useColorMode, useColorModeValue } from '@chakra-ui/react'
-
-import { FaMoon } from 'react-icons/fa'
-import NextLink from 'next/link'
-import { useSocials } from '@/hooks/app'
-import siteConfig from '~/site-config'
+import { HStack } from '@chakra-ui/react'
 
 export const PayNavbar: React.FC = () => {
-  const { toggleColorMode } = useColorMode()
-
   return (
     <HStack as="nav" fontSize="md" spacing={0} bg={'gray.50'} p={6}>
       <a href="https://devtown.in" target={'_blank'}>

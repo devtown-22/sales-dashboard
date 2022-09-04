@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { auth } from '@/lib/firebase'
+import { auth } from './firebase'
 
 export default async () => {
   const user = await auth?.currentUser

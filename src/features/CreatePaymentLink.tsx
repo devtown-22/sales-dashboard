@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Grid, GridItem, Input, Box, Heading, FormLabel, Select, Button, Flex, Text, Alert } from '@chakra-ui/react'
-import { createPaymentLink, fetchBatchesByCourse, fetchCourses, fetchProductByBatch } from '@/utils/api'
+import { createPaymentLink, fetchBatchesByCourse, fetchCourses, fetchProductByBatch } from '../utils/api'
 import { format } from 'date-fns'
 import BlockUi from 'react-block-ui'
 import Swal from 'sweetalert2'

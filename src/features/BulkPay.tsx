@@ -1,11 +1,11 @@
 import { FC, useEffect, useState } from 'react'
 import { Box, Button, Flex, Table, Tbody, Td, Text, Th, Thead, toast, Tr, useToast } from '@chakra-ui/react'
 import { BiDownArrow, BiRightArrow } from 'react-icons/all'
-import { getPaymentsByBulkId } from '@/utils/api'
+import { getPaymentsByBulkId } from '../utils/api'
 import { format } from 'date-fns'
-import { formatRawPriceToInr } from '@/utils'
+import { formatRawPriceToInr } from '../utils'
 import Swal from 'sweetalert2'
-import CustomerDetailsSideModal from '@/features/CustomerDetailsSideModal'
+import CustomerDetailsSideModal from './CustomerDetailsSideModal'
 
 const BulkPay: FC<{ _id: string; campaignName: string; preRegistrationAmount: string; totalAmount: string; salesNote: string }> = ({
   _id,

@@ -1,7 +1,7 @@
-import { getBulkPayments } from '@/utils/api'
+import { getBulkPayments } from '../../utils/api'
 import { useEffect, useState } from 'react'
 import { Table, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
-import BulkPay from '@/features/BulkPay'
+import BulkPay from '../../features/BulkPay'
 
 const BulkPayments = () => {
   const [bulkPayments, setBulkPayments] = useState([])
