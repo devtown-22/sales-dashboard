@@ -24,7 +24,7 @@ const parseCSV = (csv) => {
 
 
     for (let i = 1; i < lines.length; i++) {
-        const obj = {};
+        const obj: {email?: string; name?: string; password?: string} = {};
         const currentline = lines[i].split(',');
         for (let j = 0; j < headers.length; j++) {
             obj[headers[j]] = currentline[j];
@@ -107,7 +107,7 @@ const Admin = () => {
             <Label>
                 Select a CSV File
             </Label>
-                (The csv should have format => email, password, name)
+                (The csv should have format =&gt; email, password, name)
                 <input disabled={loading} type={'file'} onChange={onChangeHandler} />
                 {loading && <Spinner/>}
                 {users.length ?

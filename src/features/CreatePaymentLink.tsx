@@ -14,6 +14,7 @@ const CreateLinkForm = props => {
     _id: '',
     minimumPreRegistrationAmountInRupees: 0,
     minimumSellingAmountInRupees: 0,
+    minimumPreRegistrationAmount: 0,
   })
   const [isBlocking, setIsBlocking] = useState(true)
   const [createdLink, setCreatedLink] = useState(null)
@@ -24,6 +25,7 @@ const CreateLinkForm = props => {
     email: '',
     phone: '',
     sellingAmount: 0,
+    minimumPreRegistrationAmount: 0,
     minAmount: 0,
     preRegistrationAmount: 0,
     campaignName: '',
@@ -99,6 +101,7 @@ const CreateLinkForm = props => {
           _id: '',
           minimumPreRegistrationAmountInRupees: 0,
           minimumSellingAmountInRupees: 0,
+          minimumPreRegistrationAmount: 0,
         })
       }
     }

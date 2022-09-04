@@ -40,6 +40,7 @@ const PaymentPage = () => {
         contact: order.phone,
       },
     })
+    // @ts-ignore
     const rzp = new window.Razorpay({
       key: 'rzp_test_lPiHgBJs1Zsvl6',
       name: product.name,

@@ -55,7 +55,7 @@ function App(props: AppProps) {
       />
 
       <SocialProfileJsonLd
-        type="person"
+        type="Person"
         name={siteConfig.title}
         url={siteConfig.url}
         sameAs={Object.values(siteConfig.socials)}
@@ -78,7 +78,7 @@ function App(props: AppProps) {
             ) : (
               <>
                 <Navbar />
-                <Sidebar activeItemName={pathname}>
+                <Sidebar onClose={() => {}} activeItemName={pathname}>
                   <Component {...pageProps} />
                   <MobileDrawer />
                 </Sidebar>
