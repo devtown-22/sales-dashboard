@@ -14,6 +14,7 @@
     "build": "run-s \"build:**\"",
     "build:scripts": "node scripts/build.js",
     "build:web": "next build && next-sitemap",
+    "build:amplify": "next build && next export",
     "format": "run-p \"format:**\"",
     "format:index": "prettier --write \"*.{js,json,md}\"",
     "format:src": "prettier --write \"src/**/*.{css,js,ts,tsx}\""
