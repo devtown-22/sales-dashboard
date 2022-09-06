@@ -42,7 +42,7 @@ const PaymentPage = () => {
     })
     // @ts-ignore
     const rzp = new window.Razorpay({
-      key: 'rzp_test_lPiHgBJs1Zsvl6',
+      key: process.env.NEXT_PUBLIC_RAZORPAY_CLIENT_ID,
       name: product.name,
       order_id: order.razorpayOrderId,
       amount: order.amount,
