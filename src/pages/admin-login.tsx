@@ -52,7 +52,6 @@ const App = () => {
       flexDirection="column"
       width="100wh"
       height="100vh"
-      backgroundColor="gray.200"
       justifyContent="center"
       alignItems="center"
     >
@@ -61,7 +60,7 @@ const App = () => {
         <Heading color="teal.400">Admin Login</Heading>
         <Box minW={{ base: '90%', md: '468px' }}>
           <form>
-            <Stack spacing={4} p="1rem" backgroundColor="whiteAlpha.900" boxShadow="md">
+            <Stack spacing={4} p="1rem"  boxShadow="md">
               <FormControl>
                 <InputGroup>
                   <InputLeftElement pointerEvents="none" children={<CFaUserAlt color="gray.300" />} />
