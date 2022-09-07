@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 import {createUsers} from "../../utils/api";
 
 const parseCSV = (csv) => {
-    const requiredHeaders = ['email', 'name', 'password'];
+    const requiredHeaders = ['email', 'password', 'name'];
     const lines = csv.split('\n');
     const result = [];
     const headers = lines[0].split(',').map(h => h.trim());
@@ -16,6 +16,7 @@ const parseCSV = (csv) => {
         throw new Error('Invalid CSV number of headers');
     }
     // check if the headers are same
+    console.log(headers, requiredHeaders);
     for (let i = 0; i < headers.length; i++) {
         if (headers[i] !== requiredHeaders[i]) {
             throw new Error('Invalid CSV headers');
