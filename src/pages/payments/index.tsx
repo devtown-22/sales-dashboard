@@ -87,10 +87,10 @@ const P = props => {
               payments.map(p => (
                 <Tr key={p.id}>
                   <Td>{format(new Date(p.createdAt), 'dd MMMM, yyyy')}</Td>
-                  <Td>{p.order.name}</Td>
+                  <Td>{p?.order?.name}</Td>
                   <Td>{formatRawPriceToInr(p.preRegistrationAmount)}</Td>
-                  <Td>{formatRawPriceToInr(p.order.amountDue)}</Td>
-                  <Td>{formatRawPriceToInr(p.order.amount)}</Td>
+                  <Td>{formatRawPriceToInr(p.order?.amountDue)}</Td>
+                  <Td>{formatRawPriceToInr(p.order?.amount)}</Td>
                   <Td>
                     <Flex gap={4} justify={'center'}>
                       <Button
